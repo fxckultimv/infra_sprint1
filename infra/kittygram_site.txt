@@ -1,8 +1,6 @@
-IP: 84.252.136.106;
-name_taski: https://yavasilekretsu1.zapto.org/;
-name_kittygram: https://kittygram1234.ddns.net/;
-login: ihnupfidi_______это для https://yavasilekretsu1.zapto.org/;
-password: vasea011; 
-login_for: ihnupfidi1______для https://kittygram1234.ddns.net/;
-password: vasea011;
+IP: 84.201.163.235;
+name_taski: https://komisstaski.hopto.org/ ;
+name_kittygram: https://kommgramm.ru/ ;
+login: veux ;
+password: veux ; 
 
