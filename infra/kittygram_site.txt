@@ -1,4 +1,4 @@
-IP: 84.201.163.235;
+IP: 130.193.55.20;
 name_taski: https://komisstaski.hopto.org/ ;
 name_kittygram: https://kommgramm.ru/ ;
 login: veux ;
