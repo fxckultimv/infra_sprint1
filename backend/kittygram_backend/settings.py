@@ -22,9 +22,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = False
+DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
 
-ALLOWED_HOSTS = ['130.193.55.20', '127.0.0.1', 'localhost', 'kommgramm.ru']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split()
 
 INSTALLED_APPS = [
     'django.contrib.admin',
