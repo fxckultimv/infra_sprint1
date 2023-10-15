@@ -2,17 +2,29 @@ import os
 from distutils.util import strtobool
 from pathlib import Path
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
 from dotenv import load_dotenv
 
 load_dotenv()
+
+sentry_sdk.init(
+    dsn="https://08af31a43a16ba58b58fcfacd0f36566@o4506045649518592.ingest.sentry.io/4506045652860928",
+    integrations=[
+        DjangoIntegration(),
+    ],
+    traces_sample_rate=1.0,
+    send_default_pii=True
+)
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
+DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+ALLOWED_HOSTS = ['130.193.55.20', '127.0.0.1', 'localhost', 'kommgramm.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
